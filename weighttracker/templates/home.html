@@ -4,56 +4,64 @@
 
 <h3>Input your most recent measurements:</h3>
 
-<form>
-    <label for="weight">Weight:</label>
-    <input type="text" id="weight" name="weight">
-    <br>
-    <label for="bust">Bust:</label>
-    <input type="text" id="bust" name="bust">
-    <br>
-    <label for="chest">Chest:</label>
-    <input type="text" id="chest" name="chest">
-    <br>
-    <label for="waist">Waist:</label>
-    <input type="text" id="waist" name="waist">
-    <br>
-    <label for="hips">Hips:</label>
-    <input type="text" id="hips" name="hips">
-    <br>
-    <label for="neck">Neck:</label>
-    <input type="text" id="neck" name="neck">
-    <br>
-    <label>Thighs</label>
-    <br>
-    <label for="lthigh">Left:</label>
-    <input type="text" id="lthigh" name="lthigh">
-    <label for="rthigh">Right:</label>
-    <input type="text" id="rthigh" name="rthigh">
-    <br>
-    <label>Calves</label>
-    <br>
-    <label for="lcalf">Left:</label>
-    <input type="text" id="lcalf" name="lcalf">
-    <label for="rcalf">Right:</label>
-    <input type="text" id="rcalf" name="rcalf">
-    <br>
-    <label>Forarms</label>
-    <br>
-    <label for="lforearm">Left:</label>
-    <input type="text" id="lforearm" name="lforearm">
-    <label for="rforearm">Right:</label>
-    <input type="text" id="rforearm" name="rforearm">
-    <br>
-    <label>Upper Arms</label>
-    <br>
-    <label for="luarm">Left:</label>
-    <input type="text" id="luarm" name="luarm">
-    <label for="ruarm">Right:</label>
-    <input type="text" id="ruarm" name="ruarm">
-    <br>
-    <label for="date">Date of Measurement:</label>
-    <input type="date" id="date" name="date">
-    <br>
+<form method = POST>
+    <fieldset>
+        <legend>Units:</legend>
+        <input type="radio" id="metric" name="units" value="metric">
+        <label for="metric">metric</label>
+        <input type="radio" id="imperial" name="units" value="imperial">
+        <label for="imperial">imperial</label>
+    </fieldset>
+    <fieldset>
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" name="weight">
+    </fieldset>
+    <fieldset>
+        <label for="bust">Bust:</label>
+        <input type="number" id="bust" name="bust">
+        <label for="chest">Chest:</label>
+        <input type="number" id="chest" name="chest">
+        <label for="waist">Waist:</label>
+        <input type="number" id="waist" name="waist">
+        <label for="hips">Hips:</label>
+        <input type="number" id="hips" name="hips">
+        <label for="neck">Neck:</label>
+        <input type="number" id="neck" name="neck">
+    </fieldset>
+    <fieldset>
+        <legend>Thighs</legend>
+        <label for="lthigh">Left:</label>
+        <input type="number" id="lthigh" name="lthigh">
+        <label for="rthigh">Right:</label>
+        <input type="number" id="rthigh" name="rthigh">
+    </fieldset>
+    <fieldset>
+        <legend>Calves</legend>
+        <label for="lcalf">Left:</label>
+        <input type="number" id="lcalf" name="lcalf">
+        <label for="rcalf">Right:</label>
+        <input type="number" id="rcalf" name="rcalf">
+    </fieldset>
+    <fieldset>
+        <legend>Forarms</legend>
+        <label for="lforearm">Left:</label>
+        <input type="number" id="lforearm" name="lforearm">
+        <label for="rforearm">Right:</label>
+        <input type="number" id="rforearm" name="rforearm">
+    </fieldset>
+    <fieldset>
+        <legend>Upper Arms</legend>
+        <label for="luarm">Left:</label>
+        <input type="number" id="luarm" name="luarm">
+        <label for="ruarm">Right:</label>
+        <input type="number" id="ruarm" name="ruarm">
+    </fieldset>
+    <fieldset>
+        <label for="date">Date of Measurement:</label>
+        <input type="date" id="date" name="date">
+    </fieldset>
+
+    <button type="submit">Submit</button>
 </form>
 
 {% endblock content %}
