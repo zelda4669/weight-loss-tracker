@@ -17,3 +17,6 @@ class Measurements(models.Model):
     right_calf = models.DecimalField(max_digits=6, decimal_places=2)
     right_forearm = models.DecimalField(max_digits=6, decimal_places=2)
     right_upper_arm = models.DecimalField(max_digits=6, decimal_places=2)
+
+    def __str__(self):
+        return f'Body Comp from {self.date}'
