@@ -2,73 +2,45 @@
 
 {% block content %}
 
-<h3>Input your most recent measurements:</h3>
-
-<div class="container">
-    <form method = POST>
-        <fieldset>
-            <legend>Units:</legend>
-            <input type="radio" id="metric" name="units" value="metric">
-            <label for="metric">metric</label>
-            <input type="radio" id="imperial" name="units" value="imperial">
-            <label for="imperial">imperial</label>
-        </fieldset>
-        <fieldset>
-            <label for="weight">Weight:</label>
-            <input type="number" id="weight" name="weight">
-        </fieldset>
-        <fieldset>
-            <label for="bust">Bust:</label>
-            <input type="number" id="bust" name="bust">
-            <br>
-            <label for="chest">Chest:</label>
-            <input type="number" id="chest" name="chest">
-            <br>
-            <label for="waist">Waist:</label>
-            <input type="number" id="waist" name="waist">
-            <br>
-            <label for="hips">Hips:</label>
-            <input type="number" id="hips" name="hips">
-            <br>
-            <label for="neck">Neck:</label>
-            <input type="number" id="neck" name="neck">
-        </fieldset>
-        <fieldset>
-            <legend>Thighs</legend>
-            <label for="lthigh">Left:</label>
-            <input type="number" id="lthigh" name="lthigh">
-            <label for="rthigh">Right:</label>
-            <input type="number" id="rthigh" name="rthigh">
-        </fieldset>
-        <fieldset>
-            <legend>Calves</legend>
-            <label for="lcalf">Left:</label>
-            <input type="number" id="lcalf" name="lcalf">
-            <label for="rcalf">Right:</label>
-            <input type="number" id="rcalf" name="rcalf">
-        </fieldset>
-        <fieldset>
-            <legend>Forarms</legend>
-            <label for="lforearm">Left:</label>
-            <input type="number" id="lforearm" name="lforearm">
-            <label for="rforearm">Right:</label>
-            <input type="number" id="rforearm" name="rforearm">
-        </fieldset>
-        <fieldset>
-            <legend>Upper Arms</legend>
-            <label for="luarm">Left:</label>
-            <input type="number" id="luarm" name="luarm">
-            <label for="ruarm">Right:</label>
-            <input type="number" id="ruarm" name="ruarm">
-        </fieldset>
-        <fieldset>
-            <label for="date">Date of Measurement:</label>
-            <input type="date" id="date" name="date">
-        </fieldset>
-
-        <button type="submit">Submit</button>
-    </form>
-</div>
+<p><a href="./add_measurement">Add a new measurement</a></p>
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Weight</th>
+            <th>Chest</th>
+            <th>Bust</th>
+            <th>Waist</th>
+            <th>Hips</th>
+            <th>Left Thigh</th>
+            <th>Right Thigh</th>
+            <th>Left Calf</th>
+            <th>Right Calf</th>
+            <th>Left Forearm</th>
+            <th>Right Forearm</th>
+            <th>Left Upper Arm</th>
+            <th>Right Upper Arm</th>
+        </tr>
+    </thead>
+    {% for measurement in measurements_list %}
+    <tr>
+        <td>{{ measurement.date }}</td>
+        <td>{{ measurement.weight }}</td>
+        <td>{{ measurement.bust }}</td>
+        <td>{{ measurement.chest }}</td>
+        <td>{{ measurement.waist }}</td>
+        <td>{{ measurement.hips }}</td>
+        <td>{{ measurement.left_thigh }}</td>
+        <td>{{ measurement.right_thigh }}</td>
+        <td>{{ measurement.left_calf }}</td>
+        <td>{{ measurement.right_calf }}</td>
+        <td>{{ measurement.left_forearm }}</td>
+        <td>{{ measurement.right_forearm }}</td>
+        <td>{{ measurement.left_upper_arm }}</td>
+        <td>{{ measurement.right_upper_arm }}</td>
+    </tr>
+    {% endfor %}}
+</table>
 
 
 {% endblock content %}
