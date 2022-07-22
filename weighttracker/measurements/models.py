@@ -1,8 +1,8 @@
 from django.db import models
-from datetime import date
+from django.utils import timezone
 
 class Measurements(models.Model):
-    date = models.DateField(default=date.today())
+    date = models.DateField(default=timezone.now())
     weight = models.DecimalField(max_digits=6, decimal_places=2)
     bust = models.DecimalField(max_digits=6, decimal_places=2)
     chest = models.DecimalField(max_digits=6, decimal_places=2)

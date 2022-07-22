@@ -1,10 +1,10 @@
-from django.test import TestCase, SimpleTestCase
+from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from .models import Measurements
 
 
-class HomepageTests(SimpleTestCase):
+class HomepageTests(TestCase):
     def test_url_exists_correctly(self):
         response = self.client.get('')
         self.assertEqual(response.status_code, 200)
@@ -15,7 +15,7 @@ class HomepageTests(SimpleTestCase):
 
     def test_template(self):
         response = self.client.get(reverse('home'))
-        self.assertTemplateUsed(response, 'create_account.html')
+        self.assertTemplateUsed(response, 'home.html')
 
 
 class AddMeasurementsTests(TestCase):
