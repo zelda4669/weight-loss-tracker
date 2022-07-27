@@ -12,14 +12,21 @@
 </head>
 <body>
     <header>
-        <p><a href="{% url 'add_measurement' %}">Add a new measurement</a></p>
-        <h1>Comp Tracker</h1>
-        <p>Welcome, {{ user.username }}!</p>
-        <p><a href = '{% url "logout" %}'>Log Out</a></p>
+        <div class="header-left">
+            <h1>Comp Tracker</h1>
+        </div>
+        <div class="header-right">
+            <p class="welcome">Welcome, {{ user.username }}!</p>
+            <p><a class="button" href="{% url 'add_measurement' %}">Add Measurement</a></p>
+            <p><a class="button" href = '{% url "logout" %}'>Log Out</a></p>
+        </div>
     </header>
     {% if user.is_authenticated %}
-        {% block content %}
-        {% endblock content %}
+        <div class="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
     {% else %}
         <p>You are not logged in.</p>
         <p><a href = '{% url "login" %}'>Log In</a></p>
