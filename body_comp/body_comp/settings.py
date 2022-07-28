@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mokupl198=l2ma9o9aj_o2dzko@e_^q7@8^odeflfqx-1vd790'
+SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -145,10 +145,4 @@ LOGOUT_REDIRECT_URL = 'login'
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = "ferrari.noelle+body_comp@gmail.com"
-EMAIL_HOST = "smtp.sendgrid.net"
-EMAIL_HOST_USER = "apikey"
-EMAIL_HOST_PASSWORD = "sendgrid_password"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

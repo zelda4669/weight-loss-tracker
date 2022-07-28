@@ -17,6 +17,7 @@ header {
 
 .content {
     margin: 1em;
+    padding: 1em;
 }
 
 .button {
@@ -24,11 +25,16 @@ header {
     color: #F7F7FF;
     padding: 1em;
     border-radius: 4px;
+    border: none;
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 1.5em;
 }
 
 .header-right {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     align-items: end;
 }
@@ -39,4 +45,13 @@ tr {
 
 td {
     padding: 1em;
+}
+
+th {
+    padding: 1em;
+}
+
+#logo {
+    color: #070600;
+    text-decoration: none;
 }
