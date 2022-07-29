@@ -49,9 +49,14 @@ td {
 
 th {
     padding: 1em;
+    border-bottom: 3px solid #6A706E;
 }
 
 #logo {
     color: #070600;
     text-decoration: none;
+}
+
+table {
+    table-layout: fixed;
 }
