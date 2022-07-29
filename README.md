@@ -23,6 +23,7 @@ This version is an MVP for my Body Composition Tracker. It allows a user to log 
 - Bootstrap
 - [Whitenoise](https://whitenoise.evans.io/en/stable/)
 - Deployed with Heroku
+- Email integration with SendGrid
 
 ## What I Learned
 
@@ -34,10 +35,11 @@ This was also my first time using Bootstrap, which is such an awesome resource! 
 
 ## Next Steps
 
-- Get password reset email functioning (currently it only outputs to the command line which isn't very useful)
+- ~~Get password reset email functioning (currently it only outputs to the command line which isn't very useful)~~ Complete! Email integration using SendGrid is functional.
 - Add a more robust 'User Settings' page
-- Turn the navbar menu buttons into a dropdown
+- ~~Turn the navbar menu buttons into a dropdown~~ Done!
 - Add graphs to help visualize the user's progress
+- Create an Articles app that will educate users about body composition best practices
 
 ## About Me
 
